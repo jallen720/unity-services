@@ -56,7 +56,7 @@ namespace CompleteProject {
         };
 
 
-        void Start() {
+        private void Start() {
             // If we haven't set up the Unity Purchasing reference
             if (storeController == null) {
                 // Begin to configure our connection to Purchasing
