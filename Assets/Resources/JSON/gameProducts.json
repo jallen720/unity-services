@@ -1,0 +1,34 @@
+{ 
+    "gameProducts" : [
+        {
+            "type" : "Consumable",
+            "products" : [
+                {
+                    "ID"           : "consumable",
+                    "appleID"      : "com.unity3d.test.services.purchasing.consumable",
+                    "googlePlayID" : "com.unity3d.test.services.purchasing.consumable"
+                }
+            ]
+        },
+        {
+            "type" : "NonConsumable",
+            "products" : [
+                {
+                    "ID"           : "nonconsumable",
+                    "appleID"      : "com.unity3d.test.services.purchasing.nonconsumable",
+                    "googlePlayID" : "com.unity3d.test.services.purchasing.nonconsumable"
+                }
+            ]
+        },
+        {
+            "type" : "Subscription",
+            "products" : [
+                {
+                    "ID"           : "subscription",
+                    "appleID"      : "com.unity3d.test.services.purchasing.subscription",
+                    "googlePlayID" : "com.unity3d.test.services.purchasing.subscription"
+                }
+            ]
+        }
+    ]
+}
