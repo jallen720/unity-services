@@ -1,8 +1,10 @@
 { 
-    "gameProducts" : [
+    "gameProducts" :
+    [
         {
             "type" : "Consumable",
-            "products" : [
+            "products" :
+            [
                 {
                     "ID"           : "consumable",
                     "appleID"      : "com.unity3d.test.services.purchasing.consumable",
@@ -10,9 +12,11 @@
                 }
             ]
         },
+
         {
             "type" : "NonConsumable",
-            "products" : [
+            "products" :
+            [
                 {
                     "ID"           : "nonconsumable",
                     "appleID"      : "com.unity3d.test.services.purchasing.nonconsumable",
@@ -20,9 +24,11 @@
                 }
             ]
         },
+        
         {
             "type" : "Subscription",
-            "products" : [
+            "products" :
+            [
                 {
                     "ID"           : "subscription",
                     "appleID"      : "com.unity3d.test.services.purchasing.subscription",

@@ -3,15 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-namespace UnityIAPDemo {
-
-    // Deriving the Purchaser class from IStoreListener enables it to receive messages from Unity
-    // Purchasing.
-    public class Purchaser : MonoBehaviour, IStoreListener {
-        // Reference to the Purchasing system.
+namespace IAP {
+    public class IAPManager : MonoBehaviour, IStoreListener {
         private static IStoreController storeController;
-
-        // Reference to store-specific Purchasing subsystems.
         private static IExtensionProvider extensionProvider;
 
         private Dictionary<ProductType, List<GameProduct>> gameProductDatas;

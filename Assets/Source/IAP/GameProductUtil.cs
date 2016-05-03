@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-namespace UnityIAPDemo {
+namespace IAP {
 
     [Serializable]
     public struct GameProduct {
