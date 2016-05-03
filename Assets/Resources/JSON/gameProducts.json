@@ -9,6 +9,12 @@
                     "ID"           : "consumable",
                     "appleID"      : "com.unity3d.test.services.purchasing.consumable",
                     "googlePlayID" : "com.unity3d.test.services.purchasing.consumable"
+                },
+
+                {
+                    "ID"           : "consumable2",
+                    "appleID"      : "com.unity3d.test.services.purchasing.consumable2",
+                    "googlePlayID" : "com.unity3d.test.services.purchasing.consumable2"
                 }
             ]
         },
