@@ -153,7 +153,7 @@ namespace IAP {
             string productID = productDefinition.id;
             ProductType productType = productDefinition.type;
 
-            // Handle purchased producty
+            // Handle purchased product
             ValidateHasHandler(productType);
             productHandlers[productType].OnProductPurchased(productID);
 
