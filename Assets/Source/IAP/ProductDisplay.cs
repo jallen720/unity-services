@@ -21,6 +21,7 @@ namespace IAP {
         private void Start() {
             buyButtonText = buyButton.GetComponentInChildren<Text>();
             Init();
+            UpdateStatusText();
         }
 
         private void Init() {
@@ -31,6 +32,10 @@ namespace IAP {
             });
         }
 
+        private void UpdateStatusText() {
+            statusText.text = ConsumableData.GetQuantity(productID).ToString();
+        }
+
         private string GetProductName() {
             return productName == ""
                    ? productID
@@ -38,10 +43,7 @@ namespace IAP {
         }
 
         void IPurchaseListener.OnPurchaseSuccess() {
-            statusText.text = PlayerPrefs.GetString(
-                string.Format("{0}-status", productID),
-                "0"
-            );
+            UpdateStatusText();
         }
 
         void IPurchaseListener.OnPurchaseFailure() {}
