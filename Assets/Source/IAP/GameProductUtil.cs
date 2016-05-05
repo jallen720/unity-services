@@ -40,9 +40,11 @@ namespace IAP {
         }
 
         public static Dictionary<ProductType, List<GameProduct>> LoadGameProducts() {
-            string gameProductsJSON = Resources.Load<TextAsset>("JSON/gameProducts").text;
+            string gameProductsJSON = Resources.Load<TextAsset>("JSON/game-products").text;
             var productDatas = JsonUtility.FromJson<ProductDatas>(gameProductsJSON);
-            var gameProducts = new Dictionary<ProductType, List<GameProduct>>(productDatas.gameProducts.Count);
+
+            var gameProducts =
+                new Dictionary<ProductType, List<GameProduct>>(productDatas.gameProducts.Count);
 
             foreach (ProductData productData in productDatas.gameProducts) {
                 gameProducts.Add(productData.ProductType, productData.products);

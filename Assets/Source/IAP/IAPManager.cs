@@ -10,13 +10,15 @@ namespace IAP {
             try {
                 // Look up the Product reference with the general product identifier and the
                 // Purchasing system's products collection.
-                Product product = Instance.storeController.products.WithID(productID);
+                Product product =
+                    Instance
+                        .storeController
+                        .products
+                        .WithID(productID);
 
                 // If the look up found a product for this device's store and that product is ready
                 // to be sold.
                 if (product != null && product.availableToPurchase) {
-                    // Buy the product. Expect a response either through ProcessPurchase or
-                    // OnPurchaseFailed asynchronously.
                     Debug.Log(string.Format(
                         "Purchasing product asychronously: '{0}'",
                         product.definition.id
@@ -26,16 +28,15 @@ namespace IAP {
                     Instance.storeController.InitiatePurchase(product);
                 }
                 else {
-                    // ... report the product look-up failure situation  
-                    Debug.Log(
-                        "BuyProductID: FAIL. Not purchasing product, either is not found or is " +
-                        "not available for purchase"
-                    );
+                    Debug.Log(string.Format(
+                        "Can't purchase product '{0}'; either it doesn't match any product IDs " +
+                        "or it isn't available for purchase",
+                        productID
+                    ));
                 }
             }
             catch (Exception e) {
-                // ... by reporting any unexpected exception for later diagnosis.
-                Debug.Log("BuyProductID: FAIL. Exception during purchase. " + e);
+                Debug.Log("BuyProductID: FAIL. Exception during purchase: " + e);
             }
         }
 
@@ -216,10 +217,10 @@ namespace IAP {
 
         private void HandlePurchaseRequest(
             string productID,
-            Action<IPurchaseListener> purchaseHandler)
+            Action<IPurchaseListener> purchaseAction)
         {
             ValidateHasPurchaseRequest(productID);
-            purchaseHandler(purchaseRequests[productID]);
+            purchaseAction(purchaseRequests[productID]);
             purchaseRequests.Remove(productID);
         }
 

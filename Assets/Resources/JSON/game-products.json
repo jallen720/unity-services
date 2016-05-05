@@ -1,0 +1,46 @@
+{ 
+    "gameProducts" :
+    [
+        {
+            "type" : "Consumable",
+            "products" :
+            [
+                {
+                    "ID"           : "consumable0",
+                    "appleID"      : "consumable0",
+                    "googlePlayID" : "consumable0"
+                },
+
+                {
+                    "ID"           : "consumable1",
+                    "appleID"      : "consumable1",
+                    "googlePlayID" : "consumable1"
+                }
+            ]
+        },
+
+        {
+            "type" : "NonConsumable",
+            "products" :
+            [
+                {
+                    "ID"           : "nonconsumable",
+                    "appleID"      : "nonconsumable",
+                    "googlePlayID" : "nonconsumable"
+                }
+            ]
+        },
+        
+        {
+            "type" : "Subscription",
+            "products" :
+            [
+                {
+                    "ID"           : "subscription",
+                    "appleID"      : "subscription",
+                    "googlePlayID" : "subscription"
+                }
+            ]
+        }
+    ]
+}
