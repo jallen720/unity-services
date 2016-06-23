@@ -1,12 +1,14 @@
 ﻿using UnityUtils.DataUtils;
 
 public static class ConsumableData {
+    private const int DEFAULT_QUANTITY = 0;
+
     public static void ChangeQuantity(string productID, int value) {
-        SetQuantity(productID, GetQuantity(productID) + 1);
+        SetQuantity(productID, GetQuantity(productID) + value);
     }
 
     public static int GetQuantity(string productID) {
-        return Data.Load(GetKey(productID), 0);
+        return Data.Load(GetKey(productID), DEFAULT_QUANTITY);
     }
 
     private static string GetKey(string productID) {
